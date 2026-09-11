@@ -1,0 +1,25 @@
+/*
+Theme Name: EM Child Theme for OceanWP
+Theme URI: https://oceanwp.org/
+Description: OceanWP WordPress child theme.
+Author: Egoy Magnaye
+Author URI: https://egoymagnaye.com/
+Template: oceanwp
+Version: 1.0
+*/
+
+
+/* =============
+* - Fonts
+============= */
+/*@font-face {
+    font-family: 'Steelfish Rg';
+    src: url('./assets/fonts/steelfish/SteelfishRg-Regular.eot');
+    src: url('./assets/fonts/steelfish/SteelfishRg-Regular.eot') format('embedded-opentype'),
+        url('./assets/fonts/steelfish/SteelfishRg-Regular.woff2') format('woff2'),
+        url('./assets/fonts/steelfish/SteelfishRg-Regular.woff') format('woff'),
+        url('./assets/fonts/steelfish/SteelfishRg-Regular.ttf') format('truetype'),
+        url('./assets/fonts/steelfish/SteelfishRg-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
