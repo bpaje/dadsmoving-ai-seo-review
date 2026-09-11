@@ -1,0 +1,576 @@
+<title>Dad's Moving SEO Reveal</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  :root{
+    --green:#167841;
+    --green-deep:#0c4d29;
+    --green-tint:#E3F1E8;
+    --green-tint-2:#CFE8D9;
+    --ink:#17181A;
+    --ink-soft:#52585A;
+    --paper:#FAFAF7;
+    --paper-2:#F1F0EA;
+    --paper-3:#E7E5DA;
+    --line:#DEDDD3;
+    --before:#8B857C;
+    --before-tint:#F1EFE8;
+    --before-tint-2:#E6E3D8;
+    --white:#FFFFFF;
+    --panel-dark:#17181A;
+    --panel-dark-text:#F4F3EE;
+    --panel-dark-text-soft:#C7C6BD;
+    --shadow: 0 1px 2px rgba(23,24,26,.06), 0 14px 34px -14px rgba(23,24,26,.22);
+    --radius: 10px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --green:#33A968;
+      --green-deep:#1F7A48;
+      --green-tint:#123322;
+      --green-tint-2:#164229;
+      --ink:#EFEFE8;
+      --ink-soft:#B7B4A9;
+      --paper:#14150F;
+      --paper-2:#1B1C15;
+      --paper-3:#25261D;
+      --line:#33342A;
+      --before:#8E897E;
+      --before-tint:#211F1A;
+      --before-tint-2:#2A2822;
+      --white:#0F100B;
+      --shadow: 0 1px 2px rgba(0,0,0,.5), 0 16px 40px -14px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --green:#33A968;
+    --green-deep:#1F7A48;
+    --green-tint:#123322;
+    --green-tint-2:#164229;
+    --ink:#EFEFE8;
+    --ink-soft:#B7B4A9;
+    --paper:#14150F;
+    --paper-2:#1B1C15;
+    --paper-3:#25261D;
+    --line:#33342A;
+    --before:#8E897E;
+    --before-tint:#211F1A;
+    --before-tint-2:#2A2822;
+    --white:#0F100B;
+    --shadow: 0 1px 2px rgba(0,0,0,.5), 0 16px 40px -14px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Manrope",-apple-system,sans-serif;line-height:1.6;}
+  h1,h2,h3,h4{font-family:"Sora","Manrope",sans-serif;font-weight:700;text-wrap:balance;margin:0;color:var(--ink);}
+  p{margin:0;}
+  a{color:var(--green);}
+  ::selection{background:var(--green-tint-2);}
+  img{display:block;max-width:100%;}
+  button{font-family:inherit;}
+
+  .wrap{max-width:920px;margin:0 auto;padding:0 28px;}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    max-width:920px;margin:0 auto;padding:12px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .brand-mini{display:flex;align-items:center;gap:9px;}
+  .brand-mini img{width:30px;height:30px;object-fit:contain;}
+  .brand-mini .word{font-family:"Sora",sans-serif;font-weight:800;font-size:16px;letter-spacing:-.01em;}
+  .brand-mini .word span{color:var(--green);}
+  .safe-pill{
+    display:inline-flex;align-items:center;gap:7px;
+    background:var(--green-tint);color:var(--green);
+    border:1px solid var(--green-tint-2);
+    border-radius:999px;padding:6px 13px 6px 10px;
+    font-size:12px;font-weight:700;white-space:nowrap;
+  }
+  .safe-pill .dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex:none;}
+
+  /* ---------- Cover ---------- */
+  .cover{padding:76px 0 54px;}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.03em;
+    color:var(--green);display:block;margin-bottom:16px;font-weight:600;
+  }
+  .cover h1{font-size:clamp(34px,5.2vw,52px);line-height:1.08;max-width:15ch;}
+  .cover h1 em{font-style:normal;color:var(--green);}
+  .cover .lede{margin-top:20px;font-size:18px;color:var(--ink-soft);max-width:56ch;line-height:1.65;}
+  .cover .meta-row{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;}
+  .chip{
+    font-size:12.5px;font-weight:600;color:var(--ink-soft);
+    background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:7px 14px;
+  }
+
+  /* ---------- Section shell ---------- */
+  section.block{padding:70px 0;border-top:1px solid var(--line);}
+  .block-head{max-width:62ch;margin-bottom:38px;}
+  .block-kicker{
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.02em;
+    color:var(--green);font-weight:600;display:block;margin-bottom:12px;
+  }
+  .block-head h2{font-size:clamp(24px,3.4vw,32px);line-height:1.2;}
+  .block-head .sub{margin-top:12px;font-size:15.5px;color:var(--ink-soft);line-height:1.7;}
+
+  /* ---------- Before/After toggle control (shared) ---------- */
+  .ba-toggle{
+    display:inline-flex;align-items:center;background:var(--paper-2);border:1px solid var(--line);
+    border-radius:999px;padding:4px;gap:2px;margin-bottom:22px;
+  }
+  .ba-toggle button{
+    all:unset;cursor:pointer;padding:9px 20px;border-radius:999px;font-size:13.5px;font-weight:700;
+    color:var(--ink-soft);transition:background .22s ease,color .22s ease;
+  }
+  .ba-toggle button.active.is-before{background:var(--before);color:var(--white);}
+  .ba-toggle button.active.is-after{background:var(--green);color:var(--white);}
+
+  /* ---------- Hero drag-slider ---------- */
+  .slider-shell{
+    position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+    box-shadow:var(--shadow);background:var(--white);
+    aspect-ratio:16/11;user-select:none;touch-action:none;
+  }
+  .slider-pane{position:absolute;inset:0;}
+  .slider-pane.after{clip-path:inset(0 0 0 50%);}
+  .slider-divider{
+    position:absolute;top:0;bottom:0;left:50%;width:0;
+    border-left:2px solid var(--white);
+    box-shadow:0 0 0 1px rgba(0,0,0,.15);
+    transform:translateX(-50%);pointer-events:none;
+  }
+  .slider-handle{
+    position:absolute;top:50%;left:50%;width:44px;height:44px;border-radius:50%;
+    background:var(--white);box-shadow:var(--shadow);
+    display:flex;align-items:center;justify-content:center;
+    transform:translate(-50%,-50%);cursor:ew-resize;
+    border:2px solid var(--green);
+  }
+  .slider-handle svg{width:18px;height:18px;}
+  .pane-tag{
+    position:absolute;top:14px;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;
+    letter-spacing:.04em;text-transform:uppercase;padding:5px 11px;border-radius:999px;z-index:3;
+  }
+  .pane-tag.before-tag{left:14px;background:#5C574E;color:#fff;}
+  .pane-tag.after-tag{right:14px;background:#167841;color:#fff;}
+
+  /* mock homepage content inside each pane */
+  .mock-page{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--white);}
+  .mock-nav{height:15%;min-height:34px;display:flex;align-items:center;justify-content:space-between;padding:8px 4%;border-bottom:1px solid var(--paper-3);flex:none;}
+  .mock-nav .m-logo{display:flex;align-items:center;gap:6px;}
+  .mock-nav .m-logo img{width:22px;height:22px;object-fit:contain;}
+  .mock-nav .m-logo b{font-family:"Sora",sans-serif;font-size:13px;}
+  .mock-nav .m-links{display:flex;gap:14px;}
+  .mock-nav .m-links span{width:34px;height:7px;border-radius:4px;background:var(--paper-3);}
+  .mock-hero{flex:1;display:flex;flex-direction:column;justify-content:center;padding:5% 6%;gap:10px;}
+  .mock-h1-missing{width:78%;height:15px;border-radius:4px;border:1.5px dashed var(--before);background:repeating-linear-gradient(135deg,var(--before-tint) 0 6px,var(--before-tint-2) 6px 12px);}
+  .mock-h1-missing::after{content:"NO H1 FOUND";}
+  .mock-line{height:9px;border-radius:4px;background:var(--paper-3);}
+  .mock-line.w1{width:92%;}
+  .mock-line.w2{width:65%;}
+  .mock-badge-row{display:flex;gap:6px;margin-top:6px;}
+  .mock-badge-row span{width:44px;height:14px;border-radius:4px;background:var(--paper-3);}
+  .mock-cta{margin-top:10px;width:120px;height:22px;border-radius:6px;background:var(--paper-3);}
+
+  .mock-hero.after-hero .mock-h1{font-family:"Sora",sans-serif;font-weight:800;font-size:clamp(11px,2.1vw,16px);line-height:1.35;color:var(--ink);max-width:90%;}
+  .mock-hero.after-hero .mock-h1 span{color:var(--green);}
+  .mock-hero.after-hero .mock-sub{font-size:clamp(7.5px,1.3vw,9.5px);color:var(--ink-soft);max-width:85%;line-height:1.5;}
+  .mock-hero.after-hero .mock-badge-row span{background:var(--green-tint);border:1px solid var(--green-tint-2);}
+  .mock-hero.after-hero .mock-cta{background:var(--green);width:132px;}
+
+  @media (max-width:640px){
+    .mock-nav .m-links{display:none;}
+  }
+
+  .slider-caption{margin-top:16px;font-size:13px;color:var(--ink-soft);text-align:center;}
+  .slider-caption b{color:var(--ink);}
+
+  /* ---------- SERP mock ---------- */
+  .serp-shell{
+    border:1px solid var(--line);border-radius:var(--radius);background:var(--white);
+    padding:22px 24px;box-shadow:var(--shadow);
+  }
+  .serp-url{font-size:13px;color:var(--ink-soft);margin-bottom:4px;font-family:"Manrope",sans-serif;}
+  .serp-title{font-size:19px;color:#1a0dab;margin-bottom:5px;font-weight:500;line-height:1.3;}
+  :root[data-theme="dark"] .serp-title,
+  :root:not([data-theme="light"]) .serp-title{color:#8ab4f8;}
+  @media (prefers-color-scheme:light){ :root:not([data-theme="dark"]) .serp-title{color:#1a0dab;} }
+  .serp-desc{font-size:14.5px;color:var(--ink-soft);line-height:1.55;}
+  .serp-stars{display:inline-flex;align-items:center;gap:4px;margin-bottom:6px;font-size:13px;color:var(--ink-soft);}
+  .serp-stars .stars{color:#e7a91a;letter-spacing:1px;}
+  .serp-missing{font-style:italic;color:var(--before);}
+
+  .serp-panels{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media (max-width:720px){.serp-panels{grid-template-columns:1fr;}}
+  .serp-panel-label{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+  .serp-panel-label .sw{width:9px;height:9px;border-radius:50%;}
+  .serp-panel-label.b .sw{background:var(--before);}
+  .serp-panel-label.a .sw{background:var(--green);}
+  .serp-panel-label span{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);}
+
+  /* ---------- content crossfade block ---------- */
+  .content-compare{position:relative;border:1px solid var(--line);border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow);overflow:hidden;}
+  .content-face{padding:26px 28px;}
+  .content-face.hidden-face{display:none;}
+  .content-face .tag{
+    display:inline-flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",monospace;font-size:11px;
+    font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 11px;border-radius:999px;margin-bottom:14px;
+  }
+  .content-face.before .tag{background:var(--before-tint);color:var(--before);}
+  .content-face.after .tag{background:var(--green-tint);color:var(--green);}
+  .content-face h4{font-size:15px;margin-bottom:10px;}
+  .content-face p{font-size:14.5px;color:var(--ink-soft);line-height:1.7;}
+  .content-face .flag-line{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--before);}
+  .content-face.after .flag-line{color:var(--green);border-top:1px dashed var(--green-tint-2);}
+
+  /* ---------- explainer cards ---------- */
+  .why-grid{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+  .why-card{background:var(--white);padding:20px 24px;display:grid;grid-template-columns:38px 1fr;gap:16px;}
+  .why-card .ic{
+    width:38px;height:38px;border-radius:9px;background:var(--green-tint);
+    display:flex;align-items:center;justify-content:center;color:var(--green);flex:none;
+  }
+  .why-card .ic svg{width:19px;height:19px;}
+  .why-card h4{font-size:15px;margin-bottom:5px;}
+  .why-card p{font-size:13.8px;color:var(--ink-soft);line-height:1.65;}
+
+  /* ---------- tech/AI section ---------- */
+  .tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+  @media (max-width:640px){.tech-grid{grid-template-columns:1fr;}}
+  .tech-card{background:var(--white);padding:22px 24px;}
+  .tech-card .status{
+    display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.05em;
+    text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:12px;
+  }
+  .tech-card .status.fix{background:var(--before-tint);color:var(--before);}
+  .tech-card .status.add{background:var(--green-tint);color:var(--green);}
+  .tech-card h4{font-size:14.5px;margin-bottom:7px;}
+  .tech-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.65;}
+
+  .ai-callout{
+    margin-top:28px;background:var(--panel-dark);color:var(--panel-dark-text);border-radius:var(--radius);padding:26px 28px;
+  }
+  .ai-callout .eyebrow{color:#59D68C;}
+  .ai-callout p{color:var(--panel-dark-text-soft);font-size:14.5px;line-height:1.75;max-width:64ch;}
+  .ai-callout p+p{margin-top:12px;}
+  .ai-callout b{color:var(--panel-dark-text);}
+
+  /* ---------- brand promise ---------- */
+  .brand-block{
+    background:var(--green-deep);color:#fff;border-radius:16px;padding:42px 36px;
+    display:flex;flex-direction:column;gap:22px;
+  }
+  .brand-block h2{color:#fff;font-size:clamp(22px,3vw,28px);}
+  .brand-block .sub{color:#ECF9F1;font-size:15px;max-width:56ch;line-height:1.7;}
+  .brand-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:6px;}
+  .brand-mark{
+    display:flex;align-items:center;gap:12px;background:#fff;border-radius:12px;padding:12px 20px;
+  }
+  .brand-mark img{width:38px;height:38px;object-fit:contain;}
+  .brand-mark .bm-word{font-family:"Sora",sans-serif;font-weight:800;color:var(--panel-dark);font-size:20px;}
+  .brand-mark .bm-banner{background:#167841;color:#fff;font-size:11px;font-weight:700;letter-spacing:.03em;padding:3px 8px;border-radius:3px;display:inline-block;margin-top:3px;}
+  .swatch-row{display:flex;gap:16px;}
+  .swatch-item{display:flex;flex-direction:column;align-items:center;gap:8px;}
+  .swatch{width:52px;height:52px;border-radius:10px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+  .swatch-item span{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;color:#fff;}
+  .swatch.g{background:var(--green);}
+  .swatch.k{background:#111;}
+  .swatch.w{background:#fff;}
+  .brand-note{
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:10px;
+    padding:14px 18px;font-size:13px;color:#ECF9F1;line-height:1.6;
+  }
+
+  /* ---------- footer ---------- */
+  .footer-cta{padding:64px 0 90px;text-align:center;}
+  .footer-cta h2{font-size:clamp(22px,3vw,28px);max-width:26ch;margin:0 auto;}
+  .footer-cta .sub{margin-top:14px;font-size:15px;color:var(--ink-soft);max-width:50ch;margin-left:auto;margin-right:auto;}
+  .footer-links{margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn{
+    all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;
+    padding:13px 24px;border-radius:8px;font-weight:700;font-size:14px;
+  }
+  .btn.primary{background:#167841;color:#fff;}
+  .btn.ghost{background:var(--paper-2);color:var(--ink);border:1px solid var(--line);}
+
+  ::-webkit-scrollbar{width:10px;}
+  ::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px;}
+</style>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand-mini"><img src="mascot.png" alt=""><span class="word">Dad's<span> </span><span style="color:var(--ink-soft);font-weight:600;">SEO Reveal</span></span></div>
+    <div class="safe-pill"><span class="dot"></span>Brand locked — logo &amp; green stay exactly as-is</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="cover">
+    <span class="eyebrow">Prototype for review — Dad's Moving &amp; Storage</span>
+    <h1>Same Dad's. <em>Stronger</em> underneath.</h1>
+    <p class="lede">This walks through exactly what we're proposing to change on dadsmoving.com — and, just as importantly, what stays untouched. Drag the slider, flip the toggles, and see it happen.</p>
+    <div class="meta-row">
+      <span class="chip">On-page SEO</span>
+      <span class="chip">Content SEO</span>
+      <span class="chip">Technical SEO</span>
+      <span class="chip">Built for moving &amp; storage</span>
+    </div>
+  </section>
+
+  <section class="block" id="hero-slider">
+    <div class="block-head">
+      <span class="block-kicker">01 — The homepage, today vs. proposed</span>
+      <h2>Your homepage doesn't currently have a headline.</h2>
+      <p class="sub">Not a styling choice — a gap. Google's own audit of dadsmoving.com flagged the homepage as missing an H1 entirely. That's the single most important line on the page for both search engines and AI tools, and right now it's blank. Drag to compare.</p>
+    </div>
+
+    <div class="slider-shell" id="heroSlider">
+      <div class="slider-pane before">
+        <div class="mock-page">
+          <div class="mock-nav">
+            <div class="m-logo"><img src="mascot.png" alt=""><b>Dad's</b></div>
+            <div class="m-links"><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="mock-hero">
+            <div class="mock-h1-missing" title="No H1 on the live homepage"></div>
+            <div class="mock-line w1"></div>
+            <div class="mock-line w2"></div>
+            <div class="mock-badge-row"><span></span><span></span><span></span></div>
+            <div class="mock-cta"></div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-pane after">
+        <div class="mock-page">
+          <div class="mock-nav">
+            <div class="m-logo"><img src="mascot.png" alt=""><b>Dad's</b></div>
+            <div class="m-links"><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="mock-hero after-hero">
+            <div class="mock-h1">Manila's Trusted Movers — <span>Local, International &amp; Office Relocation</span></div>
+            <div class="mock-sub">Insured door-to-door moves, free pre-move survey, and a moving network that reaches 196 countries.</div>
+            <div class="mock-badge-row"><span></span><span></span><span></span></div>
+            <div class="mock-cta"></div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-divider" id="heroDivider"></div>
+      <div class="slider-handle" id="heroHandle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M8 7 3 12l5 5M16 7l5 5-5 5"/></svg>
+      </div>
+      <span class="pane-tag before-tag">Live site</span>
+      <span class="pane-tag after-tag">Proposed</span>
+    </div>
+    <p class="slider-caption">Same logo, same green, same trust badges. <b>Added:</b> an actual headline a visitor — and Google — can read in one glance.</p>
+  </section>
+
+  <section class="block" id="serp">
+    <div class="block-head">
+      <span class="block-kicker">02 — What shows up on Google</span>
+      <h2>This is the part your customers actually see first.</h2>
+      <p class="sub">Before anyone lands on your site, they see two lines of blue text and a snippet underneath. That's your title tag and meta description — and right now, Dad's homepage doesn't have a written description at all, so Google is guessing.</p>
+    </div>
+
+    <div class="serp-shell">
+      <div class="serp-panels">
+        <div>
+          <div class="serp-panel-label b"><span class="sw"></span><span>Live today</span></div>
+          <div class="serp-url">dadsmoving.com</div>
+          <div class="serp-title">Home - Dad's Moving &amp; Storage Inc.</div>
+          <div class="serp-desc serp-missing">No description written — Google auto-pulls a random line of page text instead, and it changes every time.</div>
+        </div>
+        <div>
+          <div class="serp-panel-label a"><span class="sw"></span><span>Proposed</span></div>
+          <div class="serp-url">dadsmoving.com</div>
+          <div class="serp-stars"><span class="stars">★★★★★</span> 5.0 · Manila movers</div>
+          <div class="serp-title">Movers in Manila, Philippines | Dad's Moving &amp; Storage</div>
+          <div class="serp-desc">Insured local, international &amp; office movers in Manila. Free pre-move survey, transparent pricing, and relocations to 196 countries. Get a free quote today.</div>
+        </div>
+      </div>
+    </div>
+    <p class="slider-caption">Same business, same reviews. <b>Added:</b> a title and description written to earn the click — plus your existing 5-star reviews made visible right in the search result.</p>
+  </section>
+
+  <section class="block" id="content-seo">
+    <div class="block-head">
+      <span class="block-kicker">03 — Content SEO, built for how people hire a mover</span>
+      <h2>People don't shop for movers like they shop for shoes.</h2>
+      <p class="sub">They're anxious about breakage, cost, and getting stood up on move day. Every piece of new content is built around the three questions that actually decide whether someone books: <b>can I trust you, what will it cost, and do you know my building/route specifically?</b> Here's one real example already flagged in your own SEO audit.</p>
+    </div>
+
+    <div class="ba-toggle" role="tablist" aria-label="Content comparison">
+      <button class="active is-before" data-content-state="before" role="tab" aria-selected="true">Live copy</button>
+      <button class="is-after" data-content-state="after" role="tab" aria-selected="false">Proposed copy</button>
+    </div>
+
+    <div class="content-compare">
+      <div class="content-face before" data-face="before">
+        <span class="tag">Live page</span>
+        <h4>International Moves — "How it Works"</h4>
+        <p>We listen. Tell us about your planned relocation.<br>We guide. An experienced consultant will help assess all your needs.<br>We recommend. You will receive a tailored service recommendation and package.<br>We manage. You'll have full access to our range of additional services...</p>
+        <div class="flag-line">⚠ Flagged in the SEO audit: this section closely matches wording published on two competitor moving-company sites — a duplicate-content risk that actively hurts ranking.</div>
+      </div>
+      <div class="content-face after hidden-face" data-face="after">
+        <span class="tag">Proposed</span>
+        <h4>International Moves — how Dad's actually runs a move</h4>
+        <p>Every move starts with a free virtual survey so we can quote accurately before anything is packed. From there, our team — proud members of the International Association of Movers, with partners across 196 countries — handles export packing, customs paperwork on both ends, ocean or air freight, and delivery to your new door. You get one point of contact the entire way, not a handoff between three different companies.</p>
+        <div class="flag-line">✓ Original to Dad's: names your real credentials (IAM membership, 196-country network) instead of generic process language borrowed from competitors.</div>
+      </div>
+    </div>
+
+    <div class="why-grid" style="margin-top:36px;">
+      <div class="why-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-9.3-9C1.2 8.6 2.6 5 6 5c2 0 3.3 1.1 4 2 .7-.9 2-2 4-2 3.4 0 4.8 3.6 3.3 7C19 16.4 12 21 12 21z"/></svg></div>
+        <div><h4>Trust, made specific</h4><p>Not "we care about your move" — real proof: IAM membership, 196-country network, named case studies. Generic trust language reads as generic to both readers and Google.</p></div>
+      </div>
+      <div class="why-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <div><h4>Cost, addressed early</h4><p>People abandon "contact us for pricing" pages. New content gives honest sample ranges by move size, so a visitor can self-qualify before ever calling.</p></div>
+      </div>
+      <div class="why-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5"/></svg></div>
+        <div><h4>"Do you know my building?"</h4><p>New Makati/BGC/Ortigas/QC/Alabang pages name real loading docks, elevator rules, and traffic patterns — the kind of specific local knowledge that's hard to fake and easy to trust.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="technical">
+    <div class="block-head">
+      <span class="block-kicker">04 — Technical SEO, in plain terms</span>
+      <h2>What we're fixing under the hood — and why AI tools care too.</h2>
+      <p class="sub">This is the unglamorous plumbing work. None of it is visible to a visitor, but it decides whether Google — and now ChatGPT, Google's AI Overviews, and Perplexity — can read your site correctly at all.</p>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-card">
+        <span class="status fix">Fix</span>
+        <h4>Pages telling Google "don't trust this"</h4>
+        <p>Three key pages — including Storage Solutions and Office Moves — have a technical tag ("nofollow") that was almost certainly set by accident. It quietly tells Google not to pass any trust through the page's links. It's the equivalent of putting a "do not enter" sign on your own front door.</p>
+      </div>
+      <div class="tech-card">
+        <span class="status add">Add</span>
+        <h4>"Labels" that let AI read your site correctly</h4>
+        <p>Structured data (called schema) is invisible extra tagging that spells out "this is a moving company," "this is a price range," "this is a question and its answer" — in a format search engines and AI models can parse with certainty instead of guessing.</p>
+      </div>
+      <div class="tech-card">
+        <span class="status fix">Fix</span>
+        <h4>Missing headlines and out-of-order sections</h4>
+        <p>Several pages either have no main heading (like the homepage) or have their heading levels out of order — sub-points appearing before the section they belong to. Small technically, but it confuses how both search engines and screen readers understand the page.</p>
+      </div>
+      <div class="tech-card">
+        <span class="status add">Add</span>
+        <h4>Pages written to answer, not just persuade</h4>
+        <p>Service pages currently lead with brand narrative. We're restructuring the opening of each one to answer the visitor's actual question — cost, timeline, coverage — in the first two sentences, before anything else.</p>
+      </div>
+    </div>
+
+    <div class="ai-callout">
+      <span class="eyebrow">Why this matters beyond Google</span>
+      <p>When someone types "who should I use to move from Manila to Australia" into ChatGPT instead of Google, the AI doesn't visit ten websites and compare them — it reads whichever pages are the clearest, most specifically-labeled sources on that topic, and answers directly, often naming <b>one</b> company.</p>
+      <p>That's the whole bet here: the technical fixes and the schema labeling aren't just cleanup — they're what make Dad's the page an AI model can confidently read, trust, and recommend by name instead of a competitor, or nobody at all.</p>
+    </div>
+  </section>
+
+  <section class="block" id="brand">
+    <div class="brand-block">
+      <div>
+        <span class="eyebrow" style="color:#ECF9F1;">05 — The one non-negotiable</span>
+        <h2>Nothing about how Dad's looks or sounds is changing.</h2>
+      </div>
+      <p class="sub">Every example above keeps your exact mascot, your exact green, and the plain, family-run tone that's already in your reviews. This project only touches what sits underneath that — page structure, written content, and technical tags. If there's a formal brand guide beyond the logo and color, send it over and we'll fold it in; otherwise, these three are the whole rulebook we're building against.</p>
+      <div class="brand-row">
+        <div class="brand-mark">
+          <img src="mascot.png" alt="Dad's Moving mascot">
+          <div><div class="bm-word">Dad's</div><span class="bm-banner">MOVING &amp; STORAGE</span></div>
+        </div>
+        <div class="swatch-row">
+          <div class="swatch-item"><div class="swatch g"></div><span>#167841</span></div>
+          <div class="swatch-item"><div class="swatch k"></div><span>Black</span></div>
+          <div class="swatch-item"><div class="swatch w"></div><span>White</span></div>
+        </div>
+      </div>
+      <div class="brand-note">Every mockup on this page — hero, search result, content block — reuses these three exactly. If anything here ever looks "off-brand" to you, that's a bug in the prototype, not an intentional change.</div>
+    </div>
+  </section>
+
+  <section class="footer-cta">
+    <h2>That's the reveal. Full technical detail lives separately.</h2>
+    <p class="sub">This page is the plain-language walkthrough. Every page listed here — plus 50 more, including the full Office Moves content build — is live and browsable in the detailed technical review.</p>
+    <div class="footer-links">
+      <a class="btn primary" href="https://bpaje.github.io/dadsmoving-ai-seo-review/index-review.html" target="_blank" rel="noopener">Open the full technical review →</a>
+      <a class="btn ghost" href="#hero-slider">Back to top</a>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  // Hero drag slider
+  (function(){
+    const shell = document.getElementById('heroSlider');
+    const afterPane = shell.querySelector('.slider-pane.after');
+    const divider = document.getElementById('heroDivider');
+    const handle = document.getElementById('heroHandle');
+    let dragging = false;
+
+    function setPos(pct){
+      pct = Math.max(4, Math.min(96, pct));
+      afterPane.style.clipPath = `inset(0 0 0 ${pct}%)`;
+      divider.style.left = pct + '%';
+      handle.style.left = pct + '%';
+    }
+
+    function pctFromClientX(clientX){
+      const rect = shell.getBoundingClientRect();
+      return ((clientX - rect.left) / rect.width) * 100;
+    }
+
+    handle.addEventListener('pointerdown', (e) => { dragging = true; handle.setPointerCapture(e.pointerId); });
+    window.addEventListener('pointerup', () => dragging = false);
+    window.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      setPos(pctFromClientX(e.clientX));
+    });
+    shell.addEventListener('pointerdown', (e) => {
+      if (e.target === handle) return;
+      setPos(pctFromClientX(e.clientX));
+      dragging = true;
+    });
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setPos(50);
+    if (!reduceMotion){
+      let t = 0;
+      const sweep = setInterval(() => {
+        t += 0.045;
+        const pct = 50 + Math.sin(t) * 20;
+        setPos(pct);
+        if (t > 6.3) { clearInterval(sweep); setPos(50); }
+      }, 16);
+      shell.addEventListener('pointerdown', () => clearInterval(sweep), { once:true });
+    }
+  })();
+
+  // Content compare toggle
+  (function(){
+    const buttons = document.querySelectorAll('[data-content-state]');
+    const faces = document.querySelectorAll('[data-face]');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const state = btn.getAttribute('data-content-state');
+        buttons.forEach(b => {
+          b.classList.toggle('active', b === btn);
+          b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+        });
+        faces.forEach(f => f.classList.toggle('hidden-face', f.getAttribute('data-face') !== state));
+      });
+    });
+  })();
+</script>
