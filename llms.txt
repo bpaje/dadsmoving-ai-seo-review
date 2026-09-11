@@ -1,0 +1,17 @@
+# Dad's Moving & Storage
+
+> Internal AI-SEO review clone. Do not index.
+
+## Core Services
+- [Local Moves](/local-moves/)
+- [International Moves](/international-moves/)
+- [Storage Solutions](/storage-solutions/)
+- [Office Movers in Manila](/office-movers-manila/)
+- [Pet Relocation](/pet-relocation/)
+- [U-Box](/u-box/)
+
+## Guides
+- [Complete Manila Office Relocation Guide](/blog/office-relocation-manila-complete-guide/)
+- [Moving from Manila to Australia](/international-moves/manila-to-australia/)
+- [Moving to Manila](/international-moves/moving-to-manila/)
+- [Moving and Storage FAQs](/faqs/)
