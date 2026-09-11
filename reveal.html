@@ -68,6 +68,7 @@
   ::selection{background:var(--green-tint-2);}
   img{display:block;max-width:100%;}
   button{font-family:inherit;}
+  code{font-family:"IBM Plex Mono",monospace;font-size:.92em;background:var(--paper-2);padding:1px 5px;border-radius:4px;}
 
   .wrap{max-width:920px;margin:0 auto;padding:0 28px;}
 
@@ -178,10 +179,20 @@
   .mock-badge-row span{width:44px;height:14px;border-radius:4px;background:var(--paper-3);}
   .mock-cta{margin-top:10px;width:120px;height:22px;border-radius:6px;background:var(--paper-3);}
 
-  .mock-hero.after-hero .mock-h1{font-family:"Sora",sans-serif;font-weight:800;font-size:clamp(11px,2.1vw,16px);line-height:1.35;color:var(--ink);max-width:90%;}
+  .mock-hero.after-hero .mock-h1{font-family:"Sora",sans-serif;font-weight:800;font-size:clamp(12px,2.3vw,18px);line-height:1.35;color:var(--ink);max-width:90%;}
   .mock-hero.after-hero .mock-h1 span{color:var(--green);}
   .mock-hero.after-hero .mock-sub{font-size:clamp(7.5px,1.3vw,9.5px);color:var(--ink-soft);max-width:85%;line-height:1.5;}
   .mock-hero.after-hero .mock-badge-row span{background:var(--green-tint);border:1px solid var(--green-tint-2);}
+  .mock-stars{font-size:clamp(7px,1.1vw,9px);color:#e7a91a;letter-spacing:1px;margin-bottom:2px;}
+  .mock-stars span{color:var(--ink-soft);font-family:"Manrope",sans-serif;letter-spacing:0;margin-left:4px;}
+  .tag-callout{
+    margin-top:10px;display:inline-flex;align-items:center;gap:5px;width:fit-content;
+    font-family:"IBM Plex Mono",monospace;font-size:clamp(6.5px,1vw,8.5px);font-weight:600;
+    color:var(--before);background:var(--before-tint);border:1px dashed var(--before);
+    padding:3px 7px;border-radius:5px;
+  }
+  .tag-callout code{font-family:inherit;background:none;padding:0;}
+  .tag-callout.good{color:var(--green);background:var(--green-tint);border-color:var(--green);}
   .mock-hero.after-hero .mock-cta{background:var(--green);width:132px;}
 
   @media (max-width:640px){
@@ -324,11 +335,33 @@
     </div>
   </section>
 
+  <section class="block" id="baseline">
+    <div class="block-head">
+      <span class="block-kicker">Before we go further — what's already working</span>
+      <h2>This isn't a rebuild. It's a short, specific list.</h2>
+      <p class="sub">We pulled a full crawl of dadsmoving.com (31 indexed pages) before writing a word of this. Most pages already have a real headline, a sensible title, and real content — Office Moves alone runs about 2,400 words. What follows is only the handful of gaps that crawl actually confirmed, not a guess.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <div><h4>Already solid</h4><p>Local Moves, International Moves, Storage, Office Moves, Pet Relocation, Contact and Get a Quote all already have a proper H1 and real written content — confirmed page by page in the crawl.</p></div>
+      </div>
+      <div class="why-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
+        <div><h4>One page-level gap</h4><p>The homepage specifically has no H1 tag. Everything else on the site does — this is narrow, not systemic.</p></div>
+      </div>
+      <div class="why-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h5"/></svg></div>
+        <div><h4>One site-wide gap</h4><p>Zero of the 31 pages we crawled have a meta description written. That's the clearest, most fixable item on this whole list.</p></div>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="hero-slider">
     <div class="block-head">
       <span class="block-kicker">01 — The homepage, today vs. proposed</span>
-      <h2>Your homepage doesn't currently have a headline.</h2>
-      <p class="sub">Not a styling choice — a gap. Google's own audit of dadsmoving.com flagged the homepage as missing an H1 entirely. That's the single most important line on the page for both search engines and AI tools, and right now it's blank. Drag to compare.</p>
+      <h2>Visually, nothing's wrong. In the code, one tag is missing.</h2>
+      <p class="sub">A visitor sees a normal, finished homepage — because it is one. What they can't see is that the big line of text acting as your headline was never marked up as an actual <code>&lt;h1&gt;</code>, which is the single strongest on-page signal search engines and AI tools use to understand what a page is about. Drag to compare.</p>
     </div>
 
     <div class="slider-shell" id="heroSlider">
@@ -338,12 +371,13 @@
             <div class="m-logo"><img src="mascot.png" alt=""><b>Dad's</b></div>
             <div class="m-links"><span></span><span></span><span></span><span></span></div>
           </div>
-          <div class="mock-hero">
-            <div class="mock-h1-missing" title="No H1 on the live homepage"></div>
-            <div class="mock-line w1"></div>
-            <div class="mock-line w2"></div>
+          <div class="mock-hero after-hero">
+            <div class="mock-stars">★★★★★ <span>Manila's Best Rated Movers</span></div>
+            <div class="mock-h1 no-tag-h1">Manila's Best Rated Movers</div>
+            <div class="mock-sub">Trusted By — and a row of client logos, exactly as it appears live today.</div>
             <div class="mock-badge-row"><span></span><span></span><span></span></div>
             <div class="mock-cta"></div>
+            <div class="tag-callout">This text has no <code>&lt;h1&gt;</code> behind it — it's just styled text.</div>
           </div>
         </div>
       </div>
@@ -354,10 +388,12 @@
             <div class="m-links"><span></span><span></span><span></span><span></span></div>
           </div>
           <div class="mock-hero after-hero">
-            <div class="mock-h1">Manila's Trusted Movers — <span>Local, International &amp; Office Relocation</span></div>
-            <div class="mock-sub">Insured door-to-door moves, free pre-move survey, and a moving network that reaches 196 countries.</div>
+            <div class="mock-stars">★★★★★ <span>Manila's Best Rated Movers</span></div>
+            <div class="mock-h1">Manila's Best Rated Movers</div>
+            <div class="mock-sub">Trusted By — and a row of client logos, exactly as it appears live today.</div>
             <div class="mock-badge-row"><span></span><span></span><span></span></div>
             <div class="mock-cta"></div>
+            <div class="tag-callout good">Same text. Now it's a real <code>&lt;h1&gt;</code>.</div>
           </div>
         </div>
       </div>
@@ -368,14 +404,14 @@
       <span class="pane-tag before-tag">Live site</span>
       <span class="pane-tag after-tag">Proposed</span>
     </div>
-    <p class="slider-caption">Same logo, same green, same trust badges. <b>Added:</b> an actual headline a visitor — and Google — can read in one glance.</p>
+    <p class="slider-caption">Same words, same design, same everything a visitor sees. <b>Added:</b> the one line of markup that tells Google and AI tools "this is the headline."</p>
   </section>
 
   <section class="block" id="serp">
     <div class="block-head">
       <span class="block-kicker">02 — What shows up on Google</span>
-      <h2>This is the part your customers actually see first.</h2>
-      <p class="sub">Before anyone lands on your site, they see two lines of blue text and a snippet underneath. That's your title tag and meta description — and right now, Dad's homepage doesn't have a written description at all, so Google is guessing.</p>
+      <h2>The title's fine. The description doesn't exist.</h2>
+      <p class="sub">Before anyone lands on your site, they see two lines of blue text and a snippet underneath. Your title tag is already reasonable — "Dad's Moving &amp; Storage Inc." But the description line is empty on every single page we crawled, so Google writes it for you by pulling a random sentence, and it changes every time someone searches.</p>
     </div>
 
     <div class="serp-shell">
@@ -383,19 +419,19 @@
         <div>
           <div class="serp-panel-label b"><span class="sw"></span><span>Live today</span></div>
           <div class="serp-url">dadsmoving.com</div>
-          <div class="serp-title">Home - Dad's Moving &amp; Storage Inc.</div>
-          <div class="serp-desc serp-missing">No description written — Google auto-pulls a random line of page text instead, and it changes every time.</div>
+          <div class="serp-title">Dad's Moving &amp; Storage Inc.</div>
+          <div class="serp-desc serp-missing">No description tag on the page at all — confirmed on all 31 crawled URLs. Google auto-pulls a random line of page text instead, and it changes every time.</div>
         </div>
         <div>
           <div class="serp-panel-label a"><span class="sw"></span><span>Proposed</span></div>
           <div class="serp-url">dadsmoving.com</div>
           <div class="serp-stars"><span class="stars">★★★★★</span> 5.0 · Manila movers</div>
-          <div class="serp-title">Movers in Manila, Philippines | Dad's Moving &amp; Storage</div>
+          <div class="serp-title">Dad's Moving &amp; Storage Inc. | Manila Movers</div>
           <div class="serp-desc">Insured local, international &amp; office movers in Manila. Free pre-move survey, transparent pricing, and relocations to 196 countries. Get a free quote today.</div>
         </div>
       </div>
     </div>
-    <p class="slider-caption">Same business, same reviews. <b>Added:</b> a title and description written to earn the click — plus your existing 5-star reviews made visible right in the search result.</p>
+    <p class="slider-caption">Same business, same reviews, same title. <b>Added:</b> a written description, plus a small keyword addition to the title — and your existing 5-star reviews made visible right in the result.</p>
   </section>
 
   <section class="block" id="content-seo">
@@ -451,8 +487,8 @@
     <div class="tech-grid">
       <div class="tech-card">
         <span class="status fix">Fix</span>
-        <h4>Pages telling Google "don't trust this"</h4>
-        <p>Three key pages — including Storage Solutions and Office Moves — have a technical tag ("nofollow") that was almost certainly set by accident. It quietly tells Google not to pass any trust through the page's links. It's the equivalent of putting a "do not enter" sign on your own front door.</p>
+        <h4>Zero meta descriptions, site-wide</h4>
+        <p>We crawled all 31 indexed pages. Not one has a meta description written. This is the single highest-leverage fix on the list — it's the line of text that convinces someone to click your result over a competitor's.</p>
       </div>
       <div class="tech-card">
         <span class="status add">Add</span>
@@ -461,8 +497,8 @@
       </div>
       <div class="tech-card">
         <span class="status fix">Fix</span>
-        <h4>Missing headlines and out-of-order sections</h4>
-        <p>Several pages either have no main heading (like the homepage) or have their heading levels out of order — sub-points appearing before the section they belong to. Small technically, but it confuses how both search engines and screen readers understand the page.</p>
+        <h4>One missing headline, one heading out of order</h4>
+        <p>The homepage has no H1 (every other page does). Separately, on International Moves, a sub-heading ("Door-to-Door Moving Service") currently renders above the section heading it belongs under — small, but it confuses how search engines and screen readers parse the page.</p>
       </div>
       <div class="tech-card">
         <span class="status add">Add</span>
